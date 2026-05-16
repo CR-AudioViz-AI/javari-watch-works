@@ -1,54 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  darkMode: ["class"],
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./lib/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        border:     'hsl(var(--border))',
-        input:      'hsl(var(--input))',
-        ring:       'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT:    'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT:    'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        destructive: {
-          DEFAULT:    'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        muted: {
-          DEFAULT:    'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT:    'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        popover: {
-          DEFAULT:    'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        card: {
-          DEFAULT:    'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
+        border: "hsl(var(--border, 214.3 31.8% 91.4%))",
+        input: "hsl(var(--input, 214.3 31.8% 91.4%))",
+        background: "hsl(var(--background, 0 0% 100%))",
+        foreground: "hsl(var(--foreground, 222.2 84% 4.9%))",
+        primary: { DEFAULT: "#6366f1", foreground: "#ffffff" },
+        secondary: { DEFAULT: "#8b5cf6", foreground: "#ffffff" },
+        destructive: { DEFAULT: "#ef4444", foreground: "#ffffff" },
+        muted: { DEFAULT: "#f1f5f9", foreground: "#64748b" },
+        accent: { DEFAULT: "#f8fafc", foreground: "#0f172a" },
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
-      },
+      borderRadius: { lg: "0.5rem", md: "0.375rem", sm: "0.25rem" },
     },
   },
   plugins: [],
-};
+}
